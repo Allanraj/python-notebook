@@ -1,12 +1,13 @@
 #reading files
 f = open('housing.data', 'r')
 #if f.read() == '1':
- #       print("something")
-
+ #       print("I have a file to read")
 
 data = []
-for line in f:
-    data_line = line.rstrip().split('\t')
+for line in f.readlines():
+    data_line = line.rstrip().split('\n')
     data.append(data_line)
-print (data)
+    print (data)
 
+#else:
+#    print('Booooo')
